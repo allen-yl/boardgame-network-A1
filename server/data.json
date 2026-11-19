@@ -1,0 +1,153 @@
+{
+  "next_id": 1003,
+  "users": [
+    {
+      "id": 1,
+      "username": "user",
+      "name": "王小明",
+      "role": "member",
+      "password": "ee4569dd0cbedbbb$600c71f24e958304b7ef9faa1782b37bf330688afa765338dab70be1d313a1f3",
+      "xp": 3450,
+      "level": 8,
+      "title": "白銀策略家",
+      "preferences": [
+        "策略",
+        "輕策略"
+      ]
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "name": "陳小美",
+      "role": "member",
+      "password": "5454fe557efd98bd$b2dda95aa0ce50e7df5bd5e9745a03764cf2e2e68d8b2abea7f0cf8843720440",
+      "xp": 800,
+      "level": 2,
+      "title": "桌遊新手",
+      "preferences": [
+        "派對"
+      ]
+    },
+    {
+      "id": 99,
+      "username": "admin",
+      "name": "店長大大",
+      "role": "admin",
+      "password": "d7bb06677d9e4917$6d7adfd067910e5e05c8bba23b6ee1f9cd414354d2e356f3736aca27deba0348",
+      "xp": 99999,
+      "level": 99,
+      "title": "桌遊之神",
+      "preferences": []
+    },
+    {
+      "id": 1001,
+      "username": "user3",
+      "name": "user3",
+      "role": "member",
+      "password": "589e920535276ffb$790559fc42a28d76f5c11170e78b4dd3a59b01f0d6e3e117de1b43527c64ca6e",
+      "xp": 0,
+      "level": 1,
+      "title": "桌遊新手",
+      "preferences": [
+        "派對"
+      ]
+    },
+    {
+      "id": 1002,
+      "username": "user1",
+      "name": "user1",
+      "role": "member",
+      "password": "0719880cf475452a$6ad6bc5cc9799f6ad658803b7099bf2e6e849ebf5b099418bb17b401b98d62e9",
+      "xp": 0,
+      "level": 1,
+      "title": "桌遊新手",
+      "preferences": [
+        "派對"
+      ]
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "userId": 99,
+      "userName": "店長大大",
+      "date": "2026-11-17",
+      "table": "A",
+      "time": "14:00",
+      "party_size": 6,
+      "note": "店內活動",
+      "status": "已確認"
+    },
+    {
+      "id": 2,
+      "userId": 99,
+      "userName": "店長大大",
+      "date": "2026-11-17",
+      "table": "A",
+      "time": "15:00",
+      "party_size": 6,
+      "note": "店內活動",
+      "status": "已確認"
+    },
+    {
+      "id": 1003,
+      "userId": 1002,
+      "userName": "user1",
+      "date": "2026-11-18",
+      "table": "A",
+      "time": "14:00",
+      "party_size": 4,
+      "note": "",
+      "status": "已確認"
+    }
+  ],
+  "lfg": [
+    {
+      "id": 101,
+      "host": "彬皓",
+      "game": "阿瓦隆 (Avalon)",
+      "maxPlayers": 8,
+      "currentPlayers": [
+        "彬皓",
+        "皓文",
+        "寶龍"
+      ],
+      "date": "2026-11-17",
+      "time": "17:00",
+      "table": "A"
+    },
+    {
+      "id": 102,
+      "host": "店長大大",
+      "game": "璀璨寶石 (Splendor)",
+      "maxPlayers": 4,
+      "currentPlayers": [
+        "店長大大"
+      ],
+      "date": "2026-11-17",
+      "time": "16:00",
+      "table": "B"
+    },
+    {
+      "id": 103,
+      "host": "王小明",
+      "game": "機密代號 (Codenames)",
+      "maxPlayers": 6,
+      "currentPlayers": [
+        "王小明",
+        "小美",
+        "阿強",
+        "老李",
+        "大明",
+        "阿花"
+      ],
+      "date": "2026-11-17",
+      "time": "19:00",
+      "table": "C"
+    }
+  ],
+  "tokens": {
+    "3a01bb34df782dc509581e5b011dc97c": 1001,
+    "aeefa4ae4a62ee557fa654823fd1f973": 1002
+  }
+}

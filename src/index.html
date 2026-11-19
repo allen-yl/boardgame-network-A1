@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="siteTitle">圈圈桌遊店 - 官方網站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="flex flex-col min-h-screen font-sans text-gray-800">
+
+    <nav class="bg-transparent shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center cursor-pointer" onclick="renderPage('home')">
+                    <div class="bg-indigo-600 text-white p-2 rounded-full mr-2">
+                        <i data-lucide="gamepad-2"></i>
+                    </div>
+                    <span id="navLogoText" class="font-bold text-xl text-white">圈圈桌遊店</span>
+                </div>
+
+                <div class="flex items-center gap-2 md:gap-4">
+                    <div class="hidden md:flex items-center space-x-4" id="desktop-menu">
+                    </div>
+
+                    <button onclick="toggleLang()" class="flex items-center justify-center w-10 h-10 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-full font-bold transition shadow-sm text-sm" title="Switch Language">
+                        <span id="langBtnText">EN</span>
+                    </button>
+
+                    <div class="md:hidden flex items-center">
+                        <button onclick="toggleMobileMenu()" class="text-gray-600 p-2">
+                            <i data-lucide="menu"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t px-2 pt-2 pb-3 space-y-1 shadow-inner">
+        </div>
+    </nav>
+
+    <main id="app-root" class="flex-grow animate-fade-in"></main>
+
+    <div class="chatbot-toggle">
+        <button id="chatToggleBtn" onclick="toggleChat()" class="bg-indigo-600 hover:bg-indigo-500 text-white p-3 rounded-full shadow-lg" title="開啟客服">
+            <i data-lucide="message-square" class="w-5 h-5"></i>
+        </button>
+    </div>
+
+    <div id="chatbotPanel" class="chatbot-panel" aria-hidden="true">
+        <div class="chatbot-header">
+            <div class="flex items-center gap-2">
+                <i data-lucide="robot" class="w-5 h-5 text-cyan-300"></i>
+                <div>
+                    <div id="botNameText" class="font-bold">小圈機器人</div>
+                    <div id="botDescText" class="text-xs text-gray-300">客服助理 • 可詢問營業時間與預約</div>
+                </div>
+            </div>
+            <div>
+                <button onclick="toggleChat()" class="text-gray-300 hover:text-white px-2 py-1 rounded"><i data-lucide="x" class="w-4 h-4"></i></button>
+            </div>
+        </div>
+        <div id="chatBody" class="chatbot-body"></div>
+        <div class="chatbot-input-wrap">
+            <input id="chatInput" class="chatbot-input" type="text" placeholder="輸入訊息並按 Enter 或按送出" aria-label="訊息輸入">
+            <button id="chatSendBtn" class="chatbot-send" onclick="sendChatFromInput()">送出</button>
+        </div>
+    </div>
+
+    <div id="gameModalOverlay" class="modal-overlay" onclick="closeGameModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="relative">
+                <button onclick="closeGameModal()" class="absolute top-0 right-0 p-2 text-gray-500 hover:text-gray-800">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+                <div id="gameModalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <span id="footerAbout" class="hover:text-white cursor-pointer">關於我們</span>
+                <span id="footerContact" class="hover:text-white cursor-pointer">聯絡方式</span>
+                <span id="footerPrivacy" class="hover:text-white cursor-pointer">隱私權政策</span>
+            </div>
+            <p class="text-sm">© 2026 圈圈桌遊店 Circle Board Game Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/net.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
